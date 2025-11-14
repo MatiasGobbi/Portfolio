@@ -19,3 +19,36 @@ function onScroll() {
 }
 
 window.addEventListener('scroll', onScroll);
+onScroll(); // para que marque bien al cargar
+
+// Scroll suave para los links de navegación (sidebar + mobile)
+document.querySelectorAll('.sidenav__link').forEach(link => {
+  link.addEventListener('click', function (e) {
+    const href = this.getAttribute('href');
+
+    // Solo manejamos anclas tipo #sobre-mi, #skills, etc.
+    if (href && href.startsWith('#')) {
+      e.preventDefault();
+
+      const target = document.querySelector(href);
+      if (!target) return;
+
+      const offcanvasEl = this.closest('.offcanvas');
+      if (offcanvasEl) {
+        const offcanvas = bootstrap.Offcanvas.getInstance(offcanvasEl);
+        if (offcanvas) offcanvas.hide();
+      }
+
+      // Esperamos a que el offcanvas termine su circo y después scrolleamos
+      setTimeout(() => {
+        const offset = 80; // margen superior
+        const y = target.getBoundingClientRect().top + window.scrollY - offset;
+
+        window.scrollTo({
+          top: y,
+          behavior: 'smooth'
+        });
+      }, 300);
+    }
+  });
+});

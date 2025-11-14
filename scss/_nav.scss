@@ -52,7 +52,10 @@
 
 /* Top nav (mobile) */
 .topnav {
-  background-color: #020617;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #020617;
 
   .topnav__brand {
     font-weight: 600;

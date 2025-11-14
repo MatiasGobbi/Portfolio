@@ -32,6 +32,10 @@ img {
   line-height: 1.6;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .layout {
   min-height: 100vh;
 }
@@ -98,6 +102,9 @@ img {
 
 /* Top nav (mobile) */
 .topnav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   background-color: #020617;
 }
 .topnav .topnav__brand {
