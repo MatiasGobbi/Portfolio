@@ -1,0 +1,60 @@
+.sidenav {
+  width: 260px;
+  background-color: #111827;
+  padding: 3rem 2rem;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.sidenav__name {
+  font-size: 2.1rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+
+.sidenav__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.sidenav__link {
+  color: $color-muted;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  padding-left: 2rem;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 1.5rem;
+    height: 1px;
+    background-color: $color-muted;
+    transform: translateY(-50%);
+  }
+
+  &:hover {
+    color: $color-text;
+  }
+
+  &.active {
+    color: $color-text;
+
+    &::before {
+      background-color: $color-primary;
+    }
+  }
+}
+
+/* Top nav (mobile) */
+.topnav {
+  background-color: #020617;
+
+  .topnav__brand {
+    font-weight: 600;
+  }
+}

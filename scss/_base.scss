@@ -1,0 +1,32 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: $font-main;
+  background-color: $color-bg;
+  color: $color-text;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.section {
+  padding: 5rem 0;
+}
+
+.section__title {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+.section__text {
+  color: $color-text;
+  line-height: 1.6;
+}

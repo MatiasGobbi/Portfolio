@@ -1,0 +1,17 @@
+.layout {
+  min-height: 100vh;
+}
+
+/* En pantallas grandes, sidebar + contenido */
+@media (min-width: 992px) {
+  .content {
+    padding: 3rem 3rem 3rem 0;
+  }
+}
+
+/* En mobile, que el contenido no se pegue a los bordes */
+@media (max-width: 991.98px) {
+  .content {
+    padding: 1.5rem 1rem 3rem;
+  }
+}
