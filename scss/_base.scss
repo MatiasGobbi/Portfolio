@@ -9,6 +9,7 @@ body {
   font-family: $font-main;
   background-color: $color-bg;
   color: $color-text;
+  overflow-x: hidden;
 }
 
 img {

@@ -10,6 +10,7 @@ body {
   font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   background-color: #101b35;
   color: #e5e7eb;
+  overflow-x: hidden;
 }
 
 img {
@@ -50,6 +51,54 @@ html {
 @media (max-width: 991.98px) {
   .content {
     padding: 1.5rem 1rem 3rem;
+  }
+}
+/* Ajustes generales para móviles chicos */
+@media (max-width: 576px) {
+  .section {
+    padding: 3rem 1.25rem;
+  }
+  .content {
+    padding: 1.5rem 0 3rem;
+  }
+  .section__title {
+    font-size: 1.25rem;
+    text-align: center;
+  }
+  .section__text {
+    font-size: 0.95rem;
+    text-align: left;
+  }
+  .profile-photo {
+    width: 65vw;
+    margin-top: 1.5rem;
+  }
+  .skills-logos img {
+    height: 38px;
+  }
+  .projects-card {
+    padding: 2rem 1.25rem;
+  }
+  .project-item__thumb {
+    height: 120px;
+  }
+  .contact-card {
+    padding: 2rem 1.25rem;
+  }
+}
+/* Ajuste aún más fino para móviles muy chicos (tipo 412 px o menos) */
+@media (max-width: 412px) {
+  .skills-logos {
+    gap: 1rem;
+  }
+  .skills-logos img {
+    height: 32px;
+  }
+  .sidenav__name {
+    font-size: 1.6rem;
+  }
+  .topnav .container {
+    padding-inline: 1rem;
   }
 }
 .sidenav {
@@ -199,5 +248,94 @@ html {
   height: 42px;
   opacity: 0.8;
 }
+
+/* ==========================
+   AJUSTES GENERALES MOBILE
+   ========================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Layout: en pantallas chicas que el contenido respire bien */
+@media (max-width: 768px) {
+  .content {
+    padding: 1.5rem 1rem 3rem;
+  }
+
+  .section {
+    padding: 3rem 1.25rem;
+  }
+
+  .section__title {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .section__text {
+    font-size: 0.95rem;
+  }
+
+  /* Foto de perfil más chica */
+  .profile-photo {
+    width: 70vw;
+    margin: 1.5rem auto 0;
+  }
+
+  /* Tarjetas de proyectos más contenidas */
+  .projects-card {
+    padding: 2rem 1.25rem;
+  }
+
+  .project-item__thumb {
+    height: 120px;
+  }
+
+  /* Contacto más compacto */
+  .contact-card {
+    padding: 2rem 1.25rem;
+  }
+}
+
+/* Fino para móviles chicos tipo 412px o menos */
+@media (max-width: 412px) {
+
+  .skills-logos {
+    gap: 0.75rem;
+  }
+
+  .skills-logos img {
+    height: 32px;
+  }
+
+  .topnav .container {
+    padding-inline: 0.75rem;
+  }
+
+  .section__text {
+    font-size: 0.9rem;
+  }
+}
+
+/* CONTACTO: íconos + botones RESPONSIVE */
+@media (max-width: 576px) {
+  .contact-card .row.align-items-center > div {
+    margin-top: 0.75rem;
+  }
+
+  .contact-card .row.align-items-center > div:first-child {
+    margin-top: 0;
+  }
+
+  .contact-card .btn {
+    width: auto;
+    min-width: 120px;
+  }
+}
+
 
 /*# sourceMappingURL=main.css.map */

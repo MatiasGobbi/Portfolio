@@ -15,3 +15,64 @@
     padding: 1.5rem 1rem 3rem;
   }
 }
+
+/* Ajustes generales para móviles chicos */
+@media (max-width: 576px) {
+  .section {
+    padding: 3rem 1.25rem;
+  }
+
+  .content {
+    padding: 1.5rem 0 3rem;
+  }
+
+  .section__title {
+    font-size: 1.25rem;
+    text-align: center;
+  }
+
+  .section__text {
+    font-size: 0.95rem;
+    text-align: left;
+  }
+
+  .profile-photo {
+    width: 65vw;
+    margin-top: 1.5rem;
+  }
+
+  .skills-logos img {
+    height: 38px;
+  }
+
+  .projects-card {
+    padding: 2rem 1.25rem;
+  }
+
+  .project-item__thumb {
+    height: 120px;
+  }
+
+  .contact-card {
+    padding: 2rem 1.25rem;
+  }
+}
+
+/* Ajuste aún más fino para móviles muy chicos (tipo 412 px o menos) */
+@media (max-width: 412px) {
+  .skills-logos {
+    gap: 1rem;
+  }
+
+  .skills-logos img {
+    height: 32px;
+  }
+
+  .sidenav__name {
+    font-size: 1.6rem;
+  }
+
+  .topnav .container {
+    padding-inline: 1rem;
+  }
+}
